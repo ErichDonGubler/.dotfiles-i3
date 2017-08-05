@@ -1,0 +1,65 @@
+font pango:monospace 12
+
+bar {
+    status_command i3status
+}
+
+# Keybind vars
+set $alt Mod1
+set $win Mod4
+
+# Window management
+bindsym $win+Return exec i3-sensible-terminal
+bindsym $win+Shift+q kill
+bindsym $win+Shift+d exec rofi -show run    -fg "#f1f1f1" -bg "#333333" -hlfg "#ffffff" -hlbg "#336699" -o 85
+bindsym $win+d       exec rofi -show drun   -fg "#f1f1f1" -bg "#333333" -hlfg "#ffffff" -hlbg "#336699" -o 85
+bindsym $win+tab     exec rofi -show window -fg "#f1f1f1" -bg "#333333" -hlfg "#ffffff" -hlbg "#336699" -o 85
+# bindsym $win+d exec --no-startup-id i3-dmenu-desktop
+#   Focus bindings
+bindsym $win+Up focus up
+bindsym $win+Down focus down
+bindsym $win+Left focus left
+bindsym $win+Right focus right
+bindsym $alt+tab focus mode_toggle
+bindsym $win+a focus parent
+#bindsym $win+d focus child
+#   Move bindings
+bindsym $win+Shift+Left move left
+bindsym $win+Shift+Down move down
+bindsym $win+Shift+Up move up
+bindsym $win+Shift+Right move right
+#   Layout management
+#     Splitting direction
+bindsym $win+h split h
+bindsym $win+v split v
+#     Binds to different layouts
+bindsym $win+f fullscreen toggle
+bindsym $win+s layout stacking
+bindsym $win+w layout tabbed
+bindsym $win+e layout toggle split
+#     Floating layout options
+bindsym $win+Shift+f floating toggle
+floating_modifier $alt
+#   Keyboard-based resizing
+mode "resize" {
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $win+r mode "resize"
+
+# Workspace management
+bindsym Control+$alt+Shift+Left move workspace to output left
+bindsym Control+$alt+Shift+Right move workspace to output right
+
+# i3 lifecycle
+bindsym $win+Shift+c reload
+bindsym $win+Shift+r restart
+bindsym $win+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# Use natural scrolling
+exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
