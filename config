@@ -15,7 +15,7 @@ bindsym $win+Shift+d exec rofi -show run    -fg "#f1f1f1" -bg "#333333" -hlfg "#
 bindsym $win+d       exec rofi -show drun   -fg "#f1f1f1" -bg "#333333" -hlfg "#ffffff" -hlbg "#336699" -o 85
 bindsym $win+Tab     exec rofi -show window -fg "#f1f1f1" -bg "#333333" -hlfg "#ffffff" -hlbg "#336699" -o 85
 # bindsym $win+d exec --no-startup-id i3-dmenu-desktop
-#   Focus bindings
+#   Focus
 bindsym $win+Up focus up
 bindsym $win+Down focus down
 bindsym $win+Left focus left
@@ -23,7 +23,7 @@ bindsym $win+Right focus right
 bindsym $alt+Tab focus mode_toggle
 bindsym $win+a focus parent
 #bindsym $win+d focus child
-#   Move bindings
+#   Move
 bindsym $win+Shift+Left move left
 bindsym $win+Shift+Down move down
 bindsym $win+Shift+Up move up
