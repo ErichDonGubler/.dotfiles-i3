@@ -8,8 +8,13 @@ bar {
 set $alt Mod1
 set $win Mod4
 
+# App shortcuts
+set $terminal i3-sensible-terminal
+bindsym $win+1 exec chromium
+bindsym $win+2 exec $terminal
+bindsym $win+Return exec $terminal
+
 # Window management
-bindsym $win+Return exec i3-sensible-terminal
 bindsym $win+Shift+q kill
 bindsym $win+Shift+d exec rofi -show run    -fg "#f1f1f1" -bg "#333333" -hlfg "#ffffff" -hlbg "#336699" -o 85
 bindsym $win+d       exec rofi -show drun   -fg "#f1f1f1" -bg "#333333" -hlfg "#ffffff" -hlbg "#336699" -o 85
