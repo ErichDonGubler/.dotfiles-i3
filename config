@@ -30,9 +30,8 @@ bindsym $win+Shift+Up move up
 bindsym $win+Shift+Right move right
 #   Layout management
 #     Splitting direction
-bindsym $win+h split h
-bindsym $win+v split v
-#     Binds to different layouts
+bindsym $win+Shift+bar split h
+bindsym $win+Shift+underscore split v
 bindsym $win+f fullscreen toggle
 bindsym $win+s layout stacking
 bindsym $win+w layout tabbed
