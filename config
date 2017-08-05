@@ -61,4 +61,4 @@ bindsym $win+Shift+r restart
 bindsym $win+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Use natural scrolling
-exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
+# exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
