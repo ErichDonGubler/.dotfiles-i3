@@ -2,6 +2,8 @@ font pango:monospace 12
 
 bar {
     status_command i3status
+	tray_output primary
+	workspace_buttons no
 }
 
 # Keybind vars
