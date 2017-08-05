@@ -39,6 +39,8 @@ bindsym $win+e layout toggle split
 #     Floating layout options
 bindsym $win+Shift+f floating toggle
 floating_modifier $alt
+#     Mouse options_
+mouse_warping output
 #   Keyboard-based resizing
 mode "resize" {
         bindsym Left resize shrink width 10 px or 10 ppt
